@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ghana India Kofi Annan ICT Centre</title>
+  <link rel="stylesheet" href="style.css">
+    <script>
+    function signOut() {
+      window.location.href = "index.html";
+    }
+
+    function submitContactForm(event) {
+      alert("Your message has been sent!");
+      event.preventDefault();
+    }
+    </script>
+</head>
+<body>
+  <header>
+    <h1>Contact / Ask Us</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="#" onclick="signOut()">Sign Out</a>
+  </nav>
+
+  <main>
+    <div class="contact-section">
+      <img src="S1.jpeg" alt="Students" class="side-image left">
+      <div class="contact-box">
+        <h3>Contact Us / Ask a Question</h3>
+        <form>
+          <label>Name:</label><br>
+          <input type="text" required><br>
+
+          <label>Email:</label><br>
+          <input type="email" required><br>
+
+          <label>Message:</label><br>
+          <textarea rows="4" required></textarea><br>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <img src="C1.jpg" alt="ICT class" class="side-image right">
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Ahmed Rashid Chantiwuni Ibn Musah. All Rights Reserved.
+  </footer>
+</body>
+</html>

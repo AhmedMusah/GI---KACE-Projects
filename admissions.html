@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions - Ghana India Kofi Annan ICT Centre</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function submitApplication(event) {
+      alert("Your application has been submitted successfully!");
+      window.location.href = "home.html";
+      event.preventDefault();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Ghana India Kofi Annan ICT Center</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="admissions.html" class="active">Admissions</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="window.location.href='index.html'">Sign Out</a>
+  </nav>
+
+  <main class="admission-page">
+    <form onsubmit="submitApplication(event)">
+      <!-- === Student Information === -->
+      <div class="form-section">
+        <h2>Student Information</h2>
+
+        <label for="sname">Full Name:</label>
+        <input type="text" id="sname" name="sname" required>
+
+        <label for="sage">Age:</label>
+        <input type="number" id="sage" name="sage" min="5" required>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="sgender" value="Male" required> Male</label>
+          <label><input type="radio" name="sgender" value="Female" required> Female</label>
+          <label><input type="radio" name="sgender" value="Other"> Other</label>
+        </div>
+
+        <label for="scourse">Select Course:</label>
+        <select id="scourse" name="scourse" required>
+          <option value="">-- Choose Course --</option>
+          <option value="ICT Fundamentals">ICT Fundamentals</option>
+          <option value="Networking">Networking</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+        </select>
+
+        <label for="saddress">Address:</label>
+        <textarea id="saddress" rows="3" placeholder="Enter your residential address"></textarea>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <!-- === Guardian Section === -->
+      <div class="form-section">
+        <h2>Guardian Information</h2>
+
+        <label for="gname">Full Name:</label>
+        <input type="text" id="gname" name="gname" required>
+
+        <label for="gphone">Phone Number:</label>
+        <input type="tel" id="gphone" name="gphone" required>
+
+        <label for="gemail">Email Address:</label>
+        <input type="email" id="gemail" name="gemail">
+
+        <label for="grelation">Relationship to Student:</label>
+        <input type="text" id="grelation" name="grelation" placeholder="e.g., Father, Mother, Guardian" required>
+
+        <label for="gaddress">Address:</label>
+        <textarea id="gaddress" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </main>
+
+
+
+  <footer>
+    &copy; 2025 Ahmed Rashid Chantiwuni Ibn Musah. All Rights Reserved.
+  </footer>
+</body>
+</html>
