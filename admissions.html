@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <script>
     function submitApplication(event) {
-      event.preventDefault();
       alert("Your application has been submitted successfully!");
+      window.location.href = "home.html";
+      event.preventDefault();
     }
   </script>
 </head>
@@ -26,7 +27,7 @@
 
   <main class="admission-page">
     <form onsubmit="submitApplication(event)">
-      <!-- === STUDENT SECTION === -->
+      <!-- === Student Information === -->
       <div class="form-section">
         <h2>Student Information</h2>
 
@@ -58,7 +59,7 @@
 
       <div class="form-divider"></div>
 
-      <!-- === GUARDIAN SECTION === -->
+      <!-- === Guardian Section === -->
       <div class="form-section">
         <h2>Guardian Information</h2>
 
